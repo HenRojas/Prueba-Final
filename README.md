@@ -18,11 +18,11 @@ de entrenamiento y test.
 # REQUERIMIENTOS:
 IMPORTAR LIBRERIAS BASADAS EN TENSORFLOW Y KERAS
 
-import sys
-import os
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras import optimizers
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dropout, Flatten, Dense, Activation
-from tensorflow.keras.layers import  Convolution2D, MaxPooling2D
-from tensorflow.keras import backend as K
+- import sys
+- import os
+- from tensorflow.keras.preprocessing.image import ImageDataGenerator
+- from tensorflow.keras import optimizers
+- from tensorflow.keras.models import Sequential
+- from tensorflow.keras.layers import Dropout, Flatten, Dense, Activation
+- from tensorflow.keras.layers import  Convolution2D, MaxPooling2D
+- from tensorflow.keras import backend as K
