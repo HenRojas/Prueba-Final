@@ -1,0 +1,33 @@
+#IMPORTACION DE LIBRERIAS PARA LA MUESTRA DE LA MATRIZ DE EFECTIVIDAD
+from sklearn.metrics import confusion_matrix, f1_score, roc_curve, precision_score, recall_score, accuracy_score, roc_auc_score
+from sklearn import metrics
+from mlxtend.plotting import plot_confusion_matrix
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import ImageDataGenerator 
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+#DATOS SOBRE LAS FOTOGRAFIAS Y SU TAMAÑO DE GESTIONAMIENTO
+width_shape = 100
+height_shape = 100
+batch_size = 10
+#NUMERO DE CLASES 
+names = ['Clase 1','Clase 2','Clase 3','Clase 4','Clase 5',
+         'Clase 6','Clase 7','Clase 8']
+#FUENTE DE DATOS PARA TEST
+test_data_dir = './CarneDataset/test'  
+#IMAGEDATAGENERATOR PARA LA CONFIGURACION DE RECUPERACION DE INFORMAION
+test_datagen = ImageDataGenerator()
+#CONFIGURACION DE FUNCION PARA GENERAR DATOS PARA EL TEST
+test_generator = test_datagen.flow_from_directory(
+    test_data_dir,
+    target_size=(width_shape, height_shape), 
+    batch_size = batch_size,
+    class_mode='categorical', 
+    shuffle=False)
+#INFO DEL MODELO GENERADO A RAIZ DEL ENTRENAMIENTO
+custom_Model= load_model("./modelo/modelo.h5")
+#GENERACION DE LAS PREDICCIONES
+predictions = custom_Model.predict(test_generator)
+y_pred = np.argmax(predictions, axis=1)
+y_real = test_generator.classes
