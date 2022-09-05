@@ -14,3 +14,15 @@ de entrenamiento y test.
 
 1. Obtener un clasificador de imágenes de forma que dada una nueva imagen se pueda obtener la clase correspondiente.
 2) Obtener las matrices de confusión del modelo, la matriz de confusión del error en training y la de test.
+
+# REQUERIMIENTOS:
+IMPORTAR LIBRERIAS BASADAS EN TENSORFLOW Y KERAS
+
+import sys
+import os
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras import optimizers
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dropout, Flatten, Dense, Activation
+from tensorflow.keras.layers import  Convolution2D, MaxPooling2D
+from tensorflow.keras import backend as K
