@@ -26,7 +26,3 @@ IMPORTAR LIBRERIAS BASADAS EN TENSORFLOW Y KERAS
 - from tensorflow.keras.layers import  Convolution2D, MaxPooling2D
 - from tensorflow.keras import backend as K
 
-# INTEGRANTES:
-- HENRY ROJAS DAVALOS
-- DAVID NARVAEZ BENAVIDES
-- JUAN PABLO NARVAEZ
