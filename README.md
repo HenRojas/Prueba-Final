@@ -7,8 +7,7 @@
 
    (https://drive.google.com/file/d/1Z5DJ-MVS1TQV1kow9mIFWTec-ZdOLRLF/view?usp=sharing) 
 
-Tras descomprimir el archivo de drive obtendremos dos carpetas, la carpeta de entrenamiento y la carpeta de test. Con el fin de que todo el mundo elija el mismo conjunto 
-de entrenamiento y test.
+Tras descomprimir el archivo de drive obtendremos dos carpetas, la carpeta de entrenamiento y la carpeta de test. 
 
 # OBJETIVOS:
 
